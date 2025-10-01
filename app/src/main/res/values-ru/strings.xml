@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">МедКарта</string>
+    <string name="button_theme">Сменить тему</string>
+    <string name="add_record">Добавить запись</string>
+    <string name="action_settings">Настройки</string>
+    <string name="title_hint">Название</string>
+    <string name="description_hint">Описание</string>
+    <string name="save_button">Сохранить</string>
+    <string name="Delete_Button"> Удалить запись</string>
+    <string name="date_hint">Дата (YYYY-MM-DD)</string>
+    <string name="doctor_hint">Доктор (необязательно)</string>
+    <string name="dosage_hint">Дозировка (для лекарств)</string>
+    <string name="reaction_hint">Реакция (на аллергию)</string>
+    <string name="language_button">Switch language</string>
+
+    <string name="doctor_null">Доктор не указан</string>
+    <string name="dosage_null">Лекарства не указаны</string>
+    <string name="allergies_null">Аллергии не указаны</string>
+    <string name="confirmation">Вы уверены,что хотите удалить запись?</string>
+    <string name="cancel">Отмена</string>
+    <string name="requirment">Необходимо название</string>
+    <string name="notification_title">Не забудь!!</string>
+    <string name="notification_body">На сегодня назначена запись в Медкарте</string>
+</resources>
