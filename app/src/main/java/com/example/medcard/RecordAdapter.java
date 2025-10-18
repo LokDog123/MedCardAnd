@@ -28,6 +28,7 @@ public class RecordAdapter extends ArrayAdapter<Record> {
         TextView categoryTextView = convertView.findViewById(R.id.record_category);
         TextView descriptionTextView = convertView.findViewById(R.id.record_description);
         TextView dateDoctor = convertView.findViewById(R.id.record_docktor);
+        TextView dateGrug = convertView.findViewById(R.id.record_drug);
         TextView dateDosage = convertView.findViewById(R.id.record_dosage);
         TextView dateAllergies = convertView.findViewById(R.id.record_allergies);
 
@@ -41,6 +42,13 @@ public class RecordAdapter extends ArrayAdapter<Record> {
         }
         else{
             dateDoctor.setText(record.getDoctor());
+        }
+
+        if(Objects.equals(record.getDrug(), "")){
+            dateGrug.setText(R.string.dosage_null);
+        }
+        else{
+            dateGrug.setText(record.getDrug());
         }
 
         if(Objects.equals(record.getDosage(), "")){

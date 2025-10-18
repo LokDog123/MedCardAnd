@@ -65,6 +65,14 @@
             android:textSize="14sp"/>
 
         <TextView
+            android:id="@+id/record_drug"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="@color/text_color"
+            android:textSize="14sp" />
+
+        <TextView
             android:id="@+id/record_dosage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

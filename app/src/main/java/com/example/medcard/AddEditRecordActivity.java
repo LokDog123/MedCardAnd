@@ -19,7 +19,7 @@ import android.content.DialogInterface;
 import androidx.appcompat.widget.Toolbar;
 
 public class AddEditRecordActivity extends AppCompatActivity {
-    private EditText titleEditText, dateEditText, descriptionEditText, doctorEditText, dosageEditText, reactionEditText;
+    private EditText titleEditText, dateEditText, descriptionEditText, doctorEditText, drugEditText, dosageEditText, reactionEditText;
     private Spinner categorySpinner;
     private Button saveButton, deleteButton;
     private Record currentRecord;
@@ -88,6 +88,7 @@ public class AddEditRecordActivity extends AppCompatActivity {
         dateEditText = findViewById(R.id.date_edit_text);
         descriptionEditText = findViewById(R.id.description_edit_text);
         doctorEditText = findViewById(R.id.doctor_edit_text);
+        drugEditText = findViewById(R.id.drug_edit_text);
         dosageEditText = findViewById(R.id.dosage_edit_text);
         reactionEditText = findViewById(R.id.reaction_edit_text);
         categorySpinner = findViewById(R.id.category_spinner);
@@ -127,6 +128,7 @@ public class AddEditRecordActivity extends AppCompatActivity {
         dateEditText.setText(record.getDate());
         descriptionEditText.setText(record.getDescription());
         doctorEditText.setText(record.getDoctor());
+        drugEditText.setText(record.getDrug());
         dosageEditText.setText(record.getDosage());
         reactionEditText.setText(record.getReaction());
 
@@ -143,6 +145,7 @@ public class AddEditRecordActivity extends AppCompatActivity {
         String date = dateEditText.getText().toString().trim();
         String description = descriptionEditText.getText().toString().trim();
         String doctor = doctorEditText.getText().toString().trim();
+        String drug = drugEditText.getText().toString().trim();
         String dosage = dosageEditText.getText().toString().trim();
         String reaction = reactionEditText.getText().toString().trim();
         String category = categorySpinner.getSelectedItem().toString().toLowerCase();
@@ -153,7 +156,7 @@ public class AddEditRecordActivity extends AppCompatActivity {
         }
 
         if (currentRecord == null) {
-            Record newRecord = new Record(0, title, category, date, description, doctor, dosage, reaction);
+            Record newRecord = new Record(0, title, category, date, description, doctor, drug, dosage, reaction);
             DataManager.addRecord(newRecord);
         } else {
             currentRecord.setTitle(title);
@@ -161,6 +164,7 @@ public class AddEditRecordActivity extends AppCompatActivity {
             currentRecord.setDate(date);
             currentRecord.setDescription(description);
             currentRecord.setDoctor(doctor);
+            currentRecord.setDrug(drug);
             currentRecord.setDosage(dosage);
             currentRecord.setReaction(reaction);
             DataManager.updateRecord(currentRecord);

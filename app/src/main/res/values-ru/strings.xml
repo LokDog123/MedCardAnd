@@ -9,6 +9,7 @@
     <string name="Delete_Button"> Удалить запись</string>
     <string name="date_hint">Дата (YYYY-MM-DD)</string>
     <string name="doctor_hint">Доктор (необязательно)</string>
+    <string name="drug_hint">Лекарство</string>
     <string name="dosage_hint">Дозировка (для лекарств)</string>
     <string name="reaction_hint">Реакция (на аллергию)</string>
     <string name="language_button">Switch language</string>

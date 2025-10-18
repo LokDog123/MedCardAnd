@@ -6,6 +6,7 @@
     <string name="date_hint">Date (YYYY-MM-DD)</string>
     <string name="description_hint">Description</string>
     <string name="doctor_hint">Doctor (optional)</string>
+    <string name="drug_hint">Drug (for medications)</string>
     <string name="dosage_hint">Dosage (for medications)</string>
     <string name="reaction_hint">Reaction (for allergies)</string>
     <string name="save_button">Save</string>
