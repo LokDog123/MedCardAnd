@@ -1,4 +1,4 @@
-<resources>
+ <resources>
     <string name="app_name">МедКарта</string>
     <string name="button_theme">Сменить тему</string>
     <string name="add_record">Добавить запись</string>
@@ -8,12 +8,11 @@
     <string name="save_button">Сохранить</string>
     <string name="Delete_Button"> Удалить запись</string>
     <string name="date_hint">Дата (YYYY-MM-DD)</string>
-    <string name="doctor_hint">Доктор (необязательно)</string>
+    <string name="doctor_hint">Доктор</string>
     <string name="drug_hint">Лекарство</string>
     <string name="dosage_hint">Дозировка (для лекарств)</string>
     <string name="reaction_hint">Реакция (на аллергию)</string>
     <string name="language_button">Switch language</string>
-
     <string name="doctor_null">Доктор не указан</string>
     <string name="dosage_null">Лекарства не указаны</string>
     <string name="allergies_null">Аллергии не указаны</string>

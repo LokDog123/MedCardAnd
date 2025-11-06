@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -22,6 +23,8 @@ public class AddEditRecordActivity extends AppCompatActivity {
     private EditText titleEditText, dateEditText, descriptionEditText, doctorEditText, drugEditText, dosageEditText, reactionEditText;
     private Spinner categorySpinner;
     private Button saveButton, deleteButton;
+
+    private AutoCompleteTextView doctorAutocompl;
     private Record currentRecord;
 
 
@@ -42,6 +45,7 @@ public class AddEditRecordActivity extends AppCompatActivity {
             currentRecord = DataManager.getRecordById(recordId);
             populateForm(currentRecord);
         }
+
 
 
 
@@ -82,12 +86,15 @@ public class AddEditRecordActivity extends AppCompatActivity {
                 showDeleteConfirmationDialog();
             }
         });
+            ArrayAdapter<String> adapter = new ArrayAdapter (this, android.R.layout.simple_dropdown_item_1line,DataManager.Doctor_list());
+            doctorAutocompl.setAdapter(adapter);
     }
     private void initializeViews() {
         titleEditText = findViewById(R.id.title_edit_text);
         dateEditText = findViewById(R.id.date_edit_text);
         descriptionEditText = findViewById(R.id.description_edit_text);
-        doctorEditText = findViewById(R.id.doctor_edit_text);
+        //doctorEditText = findViewById(R.id.doctor_edit_text);
+        doctorAutocompl = findViewById(R.id.autoCompleteTextView);
         drugEditText = findViewById(R.id.drug_edit_text);
         dosageEditText = findViewById(R.id.dosage_edit_text);
         reactionEditText = findViewById(R.id.reaction_edit_text);
@@ -95,6 +102,8 @@ public class AddEditRecordActivity extends AppCompatActivity {
         saveButton = findViewById(R.id.save_button);
         deleteButton = findViewById(R.id.delete_button);
     }
+
+
     private void setupCategorySpinner() {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.categories_array, android.R.layout.simple_spinner_item);
@@ -144,7 +153,7 @@ public class AddEditRecordActivity extends AppCompatActivity {
         String title = titleEditText.getText().toString().trim();
         String date = dateEditText.getText().toString().trim();
         String description = descriptionEditText.getText().toString().trim();
-        String doctor = doctorEditText.getText().toString().trim();
+        String doctor = doctorAutocompl.getText().toString().trim();
         String drug = drugEditText.getText().toString().trim();
         String dosage = dosageEditText.getText().toString().trim();
         String reaction = reactionEditText.getText().toString().trim();
