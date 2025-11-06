@@ -1,5 +1,5 @@
  <resources>
-    <string name="app_name">МедКарта</string>
+    <string name="app_name">Электронная МедКарта</string>
     <string name="button_theme">Сменить тему</string>
     <string name="add_record">Добавить запись</string>
     <string name="action_settings">Настройки</string>
@@ -19,6 +19,6 @@
     <string name="confirmation">Вы уверены,что хотите удалить запись?</string>
     <string name="cancel">Отмена</string>
     <string name="requirment">Необходимо название</string>
-    <string name="notification_title">Не забудь!!</string>
+    <string name="notification_title">Напоминание</string>
     <string name="notification_body">На сегодня назначена запись в Медкарте</string>
 </resources>
