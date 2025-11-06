@@ -86,8 +86,10 @@ public class AddEditRecordActivity extends AppCompatActivity {
                 showDeleteConfirmationDialog();
             }
         });
-            ArrayAdapter<String> adapter = new ArrayAdapter (this, android.R.layout.simple_dropdown_item_1line,DataManager.Doctor_list());
-            doctorAutocompl.setAdapter(adapter);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter (this, android.R.layout.simple_dropdown_item_1line,DataManager.Doctor_list());
+        doctorAutocompl.setAdapter(adapter);
+
     }
     private void initializeViews() {
         titleEditText = findViewById(R.id.title_edit_text);
@@ -136,7 +138,7 @@ public class AddEditRecordActivity extends AppCompatActivity {
         titleEditText.setText(record.getTitle());
         dateEditText.setText(record.getDate());
         descriptionEditText.setText(record.getDescription());
-        doctorEditText.setText(record.getDoctor());
+        doctorAutocompl.setText(record.getDoctor());
         drugEditText.setText(record.getDrug());
         dosageEditText.setText(record.getDosage());
         reactionEditText.setText(record.getReaction());
